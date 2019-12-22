@@ -1,0 +1,584 @@
+Archive member included because of file (symbol)
+
+c:/winavr/bin/../lib/gcc/avr/4.2.2/avr5\libgcc.a(_exit.o)
+                              c:/winavr/bin/../lib/gcc/avr/4.2.2/../../../../avr/lib/avr5/crtcan128.o (exit)
+c:/winavr/bin/../lib/gcc/avr/4.2.2/avr5\libgcc.a(_clear_bss.o)
+                              BootLoader_CANIO.o (__do_clear_bss)
+
+Allocating common symbols
+Common symbol       size              file
+
+local_buffer        0x100             can_isp_protocol.o
+nodeId              0x1               BootLoader_CANIO.o
+isp_start_address   0x2               isp_lib.o
+isp_number_of_bytes
+                    0x2               isp_lib.o
+isp_select_memory   0x1               isp_lib.o
+can_isp_rx_buffer   0x8               can_isp_protocol.o
+can_communication_opened
+                    0x1               can_isp_protocol.o
+can_isp_rx_msg      0xb               can_isp_protocol.o
+loc_buf_index       0x2               can_isp_protocol.o
+waitForBootMsg      0x2               BootLoader_CANIO.o
+base_isp_id         0x2               can_isp_protocol.o
+isp_select_page     0x1               isp_lib.o
+isp_number_of_bytes_copy
+                    0x2               isp_lib.o
+isp_start_address_copy
+                    0x2               isp_lib.o
+can_isp_tx_msg      0xb               can_isp_protocol.o
+isp_prog_on_going   0x1               isp_lib.o
+can_isp_tx_buffer   0x8               can_isp_protocol.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD c:/winavr/bin/../lib/gcc/avr/4.2.2/../../../../avr/lib/avr5/crtcan128.o
+Address of section .text set to 0x1e000
+Address of section .bootconf set to 0x1ff00
+Address of section .flashapi set to 0x1fffa
+LOAD BootLoader_CANIO.o
+LOAD can_drv.o
+LOAD can_isp_protocol.o
+LOAD reduced_can_lib.o
+LOAD flash_api_lib.o
+LOAD flash_boot_drv.o
+LOAD flash_boot_lib.o
+LOAD isp_lib.o
+LOAD eeprom_lib.o
+LOAD c:/winavr/bin/../lib/gcc/avr/4.2.2/avr5\libgcc.a
+LOAD c:/winavr/bin/../lib/gcc/avr/4.2.2/../../../../avr/lib/avr5\libc.a
+LOAD c:/winavr/bin/../lib/gcc/avr/4.2.2/avr5\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x0001e000     0x15ea
+ *(.vectors)
+ .vectors       0x0001e000       0x94 c:/winavr/bin/../lib/gcc/avr/4.2.2/../../../../avr/lib/avr5/crtcan128.o
+                0x0001e000                __vectors
+                0x0001e000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+ .progmem.data  0x0001e094        0xa isp_lib.o
+                0x0001e094                boot_conf
+                0x0001e09e                . = ALIGN (0x2)
+                0x0001e09e                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0001e09e        0x0 linker stubs
+ *(.trampolines*)
+                0x0001e09e                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x0001e09e                __ctors_start = .
+ *(.ctors)
+                0x0001e09e                __ctors_end = .
+                0x0001e09e                __dtors_start = .
+ *(.dtors)
+                0x0001e09e                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x0001e09e        0x0 c:/winavr/bin/../lib/gcc/avr/4.2.2/../../../../avr/lib/avr5/crtcan128.o
+                0x0001e09e                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0001e09e        0xc c:/winavr/bin/../lib/gcc/avr/4.2.2/../../../../avr/lib/avr5/crtcan128.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x0001e0aa       0x1a c:/winavr/bin/../lib/gcc/avr/4.2.2/../../../../avr/lib/avr5/crtcan128.o
+                0x0001e0aa                __do_copy_data
+ .init4         0x0001e0c4       0x10 c:/winavr/bin/../lib/gcc/avr/4.2.2/avr5\libgcc.a(_clear_bss.o)
+                0x0001e0c4                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x0001e0d4        0x8 c:/winavr/bin/../lib/gcc/avr/4.2.2/../../../../avr/lib/avr5/crtcan128.o
+ *(.init9)
+ *(.text)
+ .text          0x0001e0dc        0x4 c:/winavr/bin/../lib/gcc/avr/4.2.2/../../../../avr/lib/avr5/crtcan128.o
+                0x0001e0dc                __vector_22
+                0x0001e0dc                __vector_28
+                0x0001e0dc                __vector_1
+                0x0001e0dc                __vector_32
+                0x0001e0dc                __vector_34
+                0x0001e0dc                __vector_24
+                0x0001e0dc                __vector_12
+                0x0001e0dc                __bad_interrupt
+                0x0001e0dc                __vector_6
+                0x0001e0dc                __vector_31
+                0x0001e0dc                __vector_35
+                0x0001e0dc                __vector_3
+                0x0001e0dc                __vector_23
+                0x0001e0dc                __vector_30
+                0x0001e0dc                __vector_25
+                0x0001e0dc                __vector_11
+                0x0001e0dc                __vector_13
+                0x0001e0dc                __vector_17
+                0x0001e0dc                __vector_19
+                0x0001e0dc                __vector_7
+                0x0001e0dc                __vector_27
+                0x0001e0dc                __vector_5
+                0x0001e0dc                __vector_33
+                0x0001e0dc                __vector_4
+                0x0001e0dc                __vector_9
+                0x0001e0dc                __vector_2
+                0x0001e0dc                __vector_21
+                0x0001e0dc                __vector_15
+                0x0001e0dc                __vector_36
+                0x0001e0dc                __vector_29
+                0x0001e0dc                __vector_8
+                0x0001e0dc                __vector_26
+                0x0001e0dc                __vector_14
+                0x0001e0dc                __vector_10
+                0x0001e0dc                __vector_16
+                0x0001e0dc                __vector_18
+                0x0001e0dc                __vector_20
+ .text          0x0001e0e0       0xc4 BootLoader_CANIO.o
+                0x0001e0e0                main
+ .text          0x0001e1a4      0x3d8 can_drv.o
+                0x0001e1ca                can_get_mob_free
+                0x0001e202                can_get_mob_status
+                0x0001e22e                can_get_data
+                0x0001e1a4                can_clear_all_mob
+                0x0001e25c                can_auto_baudrate
+                0x0001e55e                can_fixed_baudrate
+ .text          0x0001e57c      0x4ca can_isp_protocol.o
+                0x0001e628                can_isp_send_error_frame
+                0x0001e64a                can_isp_protocol_task
+                0x0001e57c                can_isp_protocol_init
+                0x0001e602                can_isp_send_frame
+ .text          0x0001ea46      0x212 reduced_can_lib.o
+                0x0001eba6                can_get_status
+                0x0001ea46                can_cmd
+ .text          0x0001ec58        0x0 flash_api_lib.o
+ .text          0x0001ec58       0x4c flash_boot_drv.o
+                0x0001ec8a                flash_page_erase
+                0x0001ec70                flash_page_write
+                0x0001ec58                flash_fill_temp_buffer
+ .text          0x0001eca4      0x2ca flash_boot_lib.o
+                0x0001eca4                flash_rd_byte
+                0x0001ed64                flash_full_erase
+                0x0001ef38                flash_wr_byte
+                0x0001eccc                flash_rd_word
+                0x0001edb4                flash_wr_block
+                0x0001ecfe                flash_page_blank_check
+ .text          0x0001ef6e      0x5d2 isp_lib.o
+                0x0001ef88                isp_set_page
+                0x0001efcc                get_conf_byte
+                0x0001efa8                put_conf_block
+                0x0001ef82                isp_set_memory
+                0x0001ef6e                isp_jump_to
+                0x0001f1d6                isp_read_block
+                0x0001efba                put_conf_byte
+                0x0001f4e6                isp_memory_erase
+                0x0001f0d8                isp_blank_check
+                0x0001efe0                isp_prog_block
+                0x0001ef8e                isp_address_range
+ .text          0x0001f540       0xa8 eeprom_lib.o
+                0x0001f5c2                eeprom_rd_block
+                0x0001f58c                eeprom_full_erase
+                0x0001f564                eeprom_wr_block
+                0x0001f552                eeprom_wr_byte
+                0x0001f540                eeprom_rd_byte
+ .text          0x0001f5e8        0x0 c:/winavr/bin/../lib/gcc/avr/4.2.2/avr5\libgcc.a(_exit.o)
+ .text          0x0001f5e8        0x0 c:/winavr/bin/../lib/gcc/avr/4.2.2/avr5\libgcc.a(_clear_bss.o)
+                0x0001f5e8                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc   0x0001f5e8        0x0 c:/winavr/bin/../lib/gcc/avr/4.2.2/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x0001f5e8        0x0 c:/winavr/bin/../lib/gcc/avr/4.2.2/avr5\libgcc.a(_clear_bss.o)
+                0x0001f5e8                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x0001f5e8        0x0 c:/winavr/bin/../lib/gcc/avr/4.2.2/avr5\libgcc.a(_exit.o)
+                0x0001f5e8                exit
+                0x0001f5e8                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x0001f5e8        0x2 c:/winavr/bin/../lib/gcc/avr/4.2.2/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x0001f5ea                _etext = .
+
+.data           0x00800100        0xa load address 0x0001f5ea
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800100        0x0 c:/winavr/bin/../lib/gcc/avr/4.2.2/../../../../avr/lib/avr5/crtcan128.o
+ .data          0x00800100        0x0 BootLoader_CANIO.o
+ .data          0x00800100        0x0 can_drv.o
+ .data          0x00800100        0x0 can_isp_protocol.o
+ .data          0x00800100        0x0 reduced_can_lib.o
+ .data          0x00800100        0x0 flash_api_lib.o
+ .data          0x00800100        0x0 flash_boot_drv.o
+ .data          0x00800100        0x0 flash_boot_lib.o
+ .data          0x00800100        0xa isp_lib.o
+                0x00800100                boot_conf_default
+ .data          0x0080010a        0x0 eeprom_lib.o
+ .data          0x0080010a        0x0 c:/winavr/bin/../lib/gcc/avr/4.2.2/avr5\libgcc.a(_exit.o)
+ .data          0x0080010a        0x0 c:/winavr/bin/../lib/gcc/avr/4.2.2/avr5\libgcc.a(_clear_bss.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x0080010a                . = ALIGN (0x2)
+                0x0080010a                _edata = .
+                0x0080010a                PROVIDE (__data_end, .)
+
+.bss            0x0080010a      0x13b load address 0x0001f5f4
+                0x0080010a                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x0080010a        0x0 c:/winavr/bin/../lib/gcc/avr/4.2.2/../../../../avr/lib/avr5/crtcan128.o
+ .bss           0x0080010a        0x2 BootLoader_CANIO.o
+ .bss           0x0080010c        0x0 can_drv.o
+ .bss           0x0080010c        0x0 can_isp_protocol.o
+ .bss           0x0080010c        0x0 reduced_can_lib.o
+ .bss           0x0080010c        0x0 flash_api_lib.o
+ .bss           0x0080010c        0x0 flash_boot_drv.o
+ .bss           0x0080010c        0x0 flash_boot_lib.o
+ .bss           0x0080010c        0x0 isp_lib.o
+ .bss           0x0080010c        0x0 eeprom_lib.o
+ .bss           0x0080010c        0x0 c:/winavr/bin/../lib/gcc/avr/4.2.2/avr5\libgcc.a(_exit.o)
+ .bss           0x0080010c        0x0 c:/winavr/bin/../lib/gcc/avr/4.2.2/avr5\libgcc.a(_clear_bss.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x0080010c        0x3 BootLoader_CANIO.o
+                0x0080010c                nodeId
+                0x0080010d                waitForBootMsg
+ COMMON         0x0080010f      0x12b can_isp_protocol.o
+                0x0080010f                local_buffer
+                0x0080020f                can_isp_rx_buffer
+                0x00800217                can_communication_opened
+                0x00800218                can_isp_rx_msg
+                0x00800223                loc_buf_index
+                0x00800225                base_isp_id
+                0x00800227                can_isp_tx_msg
+                0x00800232                can_isp_tx_buffer
+ COMMON         0x0080023a        0xb isp_lib.o
+                0x0080023a                isp_start_address
+                0x0080023c                isp_number_of_bytes
+                0x0080023e                isp_select_memory
+                0x0080023f                isp_select_page
+                0x00800240                isp_number_of_bytes_copy
+                0x00800242                isp_start_address_copy
+                0x00800244                isp_prog_on_going
+                0x00800245                PROVIDE (__bss_end, .)
+                0x0001f5ea                __data_load_start = LOADADDR (.data)
+                0x0001f5f4                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800245        0x0
+                0x00800245                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00800245                PROVIDE (__noinit_end, .)
+                0x00800245                _end = .
+                0x00800245                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab           0x00000000      0x414
+ *(.stab)
+ .stab          0x00000000      0x414 c:/winavr/bin/../lib/gcc/avr/4.2.2/../../../../avr/lib/avr5/crtcan128.o
+
+.stabstr        0x00000000       0x5f
+ *(.stabstr)
+ .stabstr       0x00000000       0x5f c:/winavr/bin/../lib/gcc/avr/4.2.2/../../../../avr/lib/avr5/crtcan128.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x128
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 BootLoader_CANIO.o
+ .debug_aranges
+                0x00000020       0x20 can_drv.o
+ .debug_aranges
+                0x00000040       0x20 can_isp_protocol.o
+ .debug_aranges
+                0x00000060       0x20 reduced_can_lib.o
+ .debug_aranges
+                0x00000080       0x28 flash_api_lib.o
+ .debug_aranges
+                0x000000a8       0x20 flash_boot_drv.o
+ .debug_aranges
+                0x000000c8       0x20 flash_boot_lib.o
+ .debug_aranges
+                0x000000e8       0x20 isp_lib.o
+ .debug_aranges
+                0x00000108       0x20 eeprom_lib.o
+
+.debug_pubnames
+                0x00000000      0x545
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x39 BootLoader_CANIO.o
+ .debug_pubnames
+                0x00000039       0x92 can_drv.o
+ .debug_pubnames
+                0x000000cb      0x11c can_isp_protocol.o
+ .debug_pubnames
+                0x000001e7       0x31 reduced_can_lib.o
+ .debug_pubnames
+                0x00000218       0x29 flash_api_lib.o
+ .debug_pubnames
+                0x00000241       0x57 flash_boot_drv.o
+ .debug_pubnames
+                0x00000298       0x8b flash_boot_lib.o
+ .debug_pubnames
+                0x00000323      0x1ac isp_lib.o
+ .debug_pubnames
+                0x000004cf       0x76 eeprom_lib.o
+
+.debug_info     0x00000000     0x176b
+ *(.debug_info)
+ .debug_info    0x00000000      0x244 BootLoader_CANIO.o
+ .debug_info    0x00000244      0x322 can_drv.o
+ .debug_info    0x00000566      0x333 can_isp_protocol.o
+ .debug_info    0x00000899      0x2c3 reduced_can_lib.o
+ .debug_info    0x00000b5c       0xcc flash_api_lib.o
+ .debug_info    0x00000c28      0x109 flash_boot_drv.o
+ .debug_info    0x00000d31      0x3d0 flash_boot_lib.o
+ .debug_info    0x00001101      0x3f7 isp_lib.o
+ .debug_info    0x000014f8      0x273 eeprom_lib.o
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000      0x9fe
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x11a BootLoader_CANIO.o
+ .debug_abbrev  0x0000011a      0x10e can_drv.o
+ .debug_abbrev  0x00000228      0x152 can_isp_protocol.o
+ .debug_abbrev  0x0000037a      0x13b reduced_can_lib.o
+ .debug_abbrev  0x000004b5       0x7c flash_api_lib.o
+ .debug_abbrev  0x00000531       0x7b flash_boot_drv.o
+ .debug_abbrev  0x000005ac      0x192 flash_boot_lib.o
+ .debug_abbrev  0x0000073e      0x156 isp_lib.o
+ .debug_abbrev  0x00000894      0x16a eeprom_lib.o
+
+.debug_line     0x00000000     0x1680
+ *(.debug_line)
+ .debug_line    0x00000000      0x1ff BootLoader_CANIO.o
+ .debug_line    0x000001ff      0x349 can_drv.o
+ .debug_line    0x00000548      0x4b5 can_isp_protocol.o
+ .debug_line    0x000009fd      0x217 reduced_can_lib.o
+ .debug_line    0x00000c14       0xcf flash_api_lib.o
+ .debug_line    0x00000ce3      0x10e flash_boot_drv.o
+ .debug_line    0x00000df1      0x28d flash_boot_lib.o
+ .debug_line    0x0000107e      0x473 isp_lib.o
+ .debug_line    0x000014f1      0x18f eeprom_lib.o
+
+.debug_frame    0x00000000      0x300
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x20 BootLoader_CANIO.o
+ .debug_frame   0x00000020       0x70 can_drv.o
+ .debug_frame   0x00000090       0x50 can_isp_protocol.o
+ .debug_frame   0x000000e0       0x30 reduced_can_lib.o
+ .debug_frame   0x00000110       0x20 flash_api_lib.o
+ .debug_frame   0x00000130       0x40 flash_boot_drv.o
+ .debug_frame   0x00000170       0x70 flash_boot_lib.o
+ .debug_frame   0x000001e0       0xc0 isp_lib.o
+ .debug_frame   0x000002a0       0x60 eeprom_lib.o
+
+.debug_str      0x00000000      0x81e
+ *(.debug_str)
+ .debug_str     0x00000000      0x191 BootLoader_CANIO.o
+                                0x1cc (size before relaxing)
+ .debug_str     0x00000191      0x1a1 can_drv.o
+                                0x27d (size before relaxing)
+ .debug_str     0x00000332      0x166 can_isp_protocol.o
+                                0x2dc (size before relaxing)
+ .debug_str     0x00000498       0x53 reduced_can_lib.o
+                                0x1ec (size before relaxing)
+ .debug_str     0x000004eb       0x4b flash_api_lib.o
+                                0x11c (size before relaxing)
+ .debug_str     0x00000536       0x65 flash_boot_drv.o
+                                0x14a (size before relaxing)
+ .debug_str     0x0000059b       0xec flash_boot_lib.o
+                                0x1fe (size before relaxing)
+ .debug_str     0x00000687      0x11e isp_lib.o
+                                0x2ad (size before relaxing)
+ .debug_str     0x000007a5       0x79 eeprom_lib.o
+                                0x16b (size before relaxing)
+
+.debug_loc      0x00000000      0xd71
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x3c3 can_drv.o
+ .debug_loc     0x000003c3      0x10d can_isp_protocol.o
+ .debug_loc     0x000004d0      0x166 reduced_can_lib.o
+ .debug_loc     0x00000636       0x48 flash_api_lib.o
+ .debug_loc     0x0000067e      0x371 flash_boot_lib.o
+ .debug_loc     0x000009ef      0x2c1 isp_lib.o
+ .debug_loc     0x00000cb0       0xc1 eeprom_lib.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(BootLoader_CANIO.elf elf32-avr)
+LOAD linker stubs
+
+.bootconf       0x0001ff00        0x0
+
+.flashapi       0x0001fffa        0x6
+ .flashapi      0x0001fffa        0x6 flash_api_lib.o
+                0x0001fffa                flash_api_wr_block
