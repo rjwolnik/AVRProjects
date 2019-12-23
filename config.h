@@ -13,7 +13,7 @@
 //! This file has been validated with AVRStudio-413528/WinAVR-20070122.
 //!
 //! @version $Revision: 3.20 $ $Name: jtellier $
-//!
+//! @test
 //! @todo
 //! @bug
 //******************************************************************************
